@@ -1,2 +1,2 @@
 ## Repositório de Linguagem de Programação II 
-##### (Programação Orientada a Objetos)
+##### (Programação Orientada a Objetos utilizando Java)
