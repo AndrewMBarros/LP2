@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
+import figures.*;
 import figures.Polygon;
 
 class PackApp {
