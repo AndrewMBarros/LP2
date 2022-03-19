@@ -1,18 +1,22 @@
 package figures;
 
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 
 public class Ellipse {
-    private int x, y;
-    private int w, h;
+    int  x, y;
+    int  w, h;
 
-    public Ellipse (int x, int y, int w, int h) {
+    Color drawColor, fillColor;
+
+    public Ellipse (int x, int y, int w, int h, Color fillColor, Color drawColor) {
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
+        this.fillColor = fillColor;
+        this.drawColor = drawColor;
     }
 
     public void print () {
