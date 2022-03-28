@@ -3,6 +3,9 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Ellipse2D.Double; 
+
 
 class ListApp {
     public static void main (String[] args) {
@@ -31,25 +34,26 @@ class ListFrame extends JFrame {
                     if (evt.getKeyChar() == 'r') {
                         int x = rand.nextInt(350);
                         int y = rand.nextInt(350);
-                        int w = rand.nextInt(50);
-                        int h = rand.nextInt(50);
+                        int w = rand.nextInt(200);
+                        int h = rand.nextInt(200);
                         rs.add(new Rect(x,y, w,h));
                         repaint();  // outer.repaint()
                     }
                     if (evt.getKeyChar() == 'e') {
                         int x = rand.nextInt(350);
-                        int y = rand.nextInt(350);
-                        int w = rand.nextInt(50);
-                        int h = rand.nextInt(50);
+                        int y = rand.nextInt(550);
+                        int w = rand.nextInt(150);
+                        int h = rand.nextInt(250);
                         els.add(new Ellipse(x,y, w,h));
                         repaint();
                     }
                 }
             }
+            
         );
 
         this.setTitle("Lista de Retangulos");
-        this.setSize(350, 350);
+        this.setSize(640, 480);
     }
 
     public void paint (Graphics g) {
@@ -104,6 +108,6 @@ class Ellipse {
 
     void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        g2d.drawRect(this.x,this.y, this.w,this.h);
+        g2d.draw(new Ellipse2D.Double(this.x,this.y, this.w,this.h));
     }
 }
